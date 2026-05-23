@@ -31,4 +31,5 @@ First public cut. Expect breaking changes through `0.x`.
 - No Indic-script font pairing.
 - Marketing-site UI kit is not in this repo by design; consume the production site for public-mode references.
 
+[0.1.1]: https://github.com/tralgora/design-system/releases/tag/v0.1.1
 [0.1.0]: https://github.com/tralgora/design-system/releases/tag/v0.1.0

@@ -7,7 +7,7 @@ Single source of visual truth for **Tralgora** — a market intelligence radar f
 
 **Dark-only in v1.** Premium terminal-meets-research-dashboard. oklch color, monospace numerals, hairline borders, no decorative motion.
 
-[![version](https://img.shields.io/badge/version-0.1.0-1f8b58?style=flat-square)](./CHANGELOG.md)
+[![version](https://img.shields.io/badge/version-0.1.1-1f8b58?style=flat-square)](./CHANGELOG.md)
 [![license](https://img.shields.io/badge/license-Proprietary-2c333d?style=flat-square)](./LICENSE)
 
 ---
@@ -17,16 +17,24 @@ Single source of visual truth for **Tralgora** — a market intelligence radar f
 **As an npm dep (recommended):**
 
 ```bash
-npm i github:tralgora/design-system#v0.1.0
+npm i github:tralgora/design-system#v0.1.1
 ```
 
 ```css
 /* Tokens only — the 95% case */
-@import url("@tralgora/design-system/tokens/tokens.css");
+@import "@tralgora/design-system/tokens/tokens.css";
 
 /* Or tokens + fonts + semantic type classes */
-@import url("@tralgora/design-system/colors_and_type.css");
+@import "@tralgora/design-system/colors_and_type.css";
 ```
+
+> **Next.js (Turbopack) note.** Turbopack's CSS pipeline does not resolve bare-specifier `@import` from `node_modules`. Use a relative path instead:
+>
+> ```css
+> @import "../node_modules/@tralgora/design-system/tokens/tokens.css";
+> ```
+>
+> If you're loading the fonts through `next/font/local`, point the `src` at `node_modules/@tralgora/design-system/fonts/...` so the woff2 files come from one place. Don't also import `colors_and_type.css` — its `@font-face` rules collide with `next/font`. Tokens-only on Next.js.
 
 **As a git submodule:**
 
@@ -90,7 +98,7 @@ See `docs/compliance.md`.
 Tagged with semver. See [`CHANGELOG.md`](./CHANGELOG.md). Pin to a tag in production:
 
 ```json
-"@tralgora/design-system": "github:tralgora/design-system#v0.1.0"
+"@tralgora/design-system": "github:tralgora/design-system#v0.1.1"
 ```
 
 ---
