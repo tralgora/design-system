@@ -2,6 +2,11 @@
 
 All notable changes to the Tralgora Design System are documented here. This project follows [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] — 2026-05-23
+
+### Fixed
+- **`--font-sans` / `--font-mono` / `--font-serif` cascade collision with `next/font/local`.** v0.1.0 declared these in `:root`, which has equal specificity (0,1,0) to the class selector `next/font/local` injects on `<html>`. Because consumer CSS typically loads after `next/font`, the design-system's bare fallback stack was winning over the next/font generated family, causing self-hosted Geist not to actually render in production. Now wrapped in `:where(:root)` (zero specificity) so any class-based override wins automatically. Plain HTML consumers without their own font loading still get the fallback stack.
+
 ## [0.1.0] — 2026-05-23
 
 First public cut. Expect breaking changes through `0.x`.

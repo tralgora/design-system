@@ -7,12 +7,7 @@
 
 :root {
   /* ===== VERSION ===== */
-  --ds-version: "0.1.0";
-
-  /* ===== TYPE FAMILIES ===== */
-  --font-sans:  "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono:  "Geist Mono", ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
-  --font-serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --ds-version: "0.1.1";
 
   /* ===== TYPE SCALE ===== */
   --fs-12: 12px;   --fs-13: 13px;   --fs-14: 14px;   --fs-15: 15px;
@@ -151,6 +146,18 @@
   --container-tight:   640px;
   --container-form:    560px;
   --container-input:   480px;
+}
+
+/* =============================================================
+   TYPE FAMILIES — zero-specificity defaults
+   :where() has 0 specificity so any class-based override
+   (e.g. next/font/local) wins automatically. Plain consumers
+   without their own font loading still get the fallback stack.
+   ============================================================= */
+:where(:root) {
+  --font-sans:  "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:  "Geist Mono", ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  --font-serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
 }
 
 /* ============================================================

@@ -1,6 +1,6 @@
 {
   "name": "@tralgora/design-system",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tralgora design system — dark-only oklch tokens, type, logo, icons, and UI kit reference for Indian-markets product surfaces.",
   "private": false,
   "license": "SEE LICENSE IN LICENSE",
