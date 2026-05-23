@@ -1,0 +1,35 @@
+# ============================================================
+# Tralgora Design System — .gitignore
+# ============================================================
+
+# Studio / agent-environment artifacts
+.design-canvas.state.json
+.thumbnail
+.thumbnail.*
+.DS_Store
+Thumbs.db
+
+# Internal-only material (founder briefs, scratch explorations).
+# Kept locally for reference, not part of the published system.
+_internal/
+
+# Node / build
+node_modules/
+dist/
+build/
+.cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Env
+.env
+.env.local
+.env.*.local

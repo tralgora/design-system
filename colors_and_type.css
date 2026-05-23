@@ -1,0 +1,169 @@
+/* =============================================================
+   TRALGORA DESIGN SYSTEM — colors_and_type.css
+   This file = tokens + fonts + semantic type classes.
+   Tokens are sourced from tokens/tokens.css (don't duplicate).
+   ============================================================= */
+
+@import url("./tokens/tokens.css");
+
+/* ---- Fonts (self-hosted webfonts) ---- */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/geist-variable.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/geist-mono-variable.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/instrument-serif-400-italic.woff2') format('woff2');
+}
+
+/* ============================================================
+   SEMANTIC TYPE — drop these classes on elements
+   ============================================================ */
+
+html, body {
+  background: var(--bg);
+  color: var(--text-1);
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.t-display, h1.t-display {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: clamp(var(--fs-64), 8vw, var(--fs-104));
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-display);
+  color: var(--text-1);
+}
+
+.t-h1, h1 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: clamp(var(--fs-48), 5vw, var(--fs-80));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--text-1);
+}
+
+.t-h2, h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: clamp(var(--fs-36), 3.6vw, var(--fs-48));
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-display);
+  color: var(--text-1);
+}
+
+.t-h3, h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-28);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-heading);
+  color: var(--text-1);
+}
+
+.t-h4, h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-20);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-heading);
+  color: var(--text-1);
+}
+
+.t-lead {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-18);
+  line-height: 1.55;
+  color: var(--text-2);
+}
+
+.t-body, p {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-16);
+  line-height: var(--lh-body);
+  color: var(--text-2);
+}
+
+.t-body-sm {
+  font-size: var(--fs-14);
+  line-height: 1.55;
+  color: var(--text-2);
+}
+
+.t-eyebrow {
+  font-family: var(--font-mono);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-12);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.t-label {
+  font-family: var(--font-mono);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-12);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.t-mono, code, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  letter-spacing: var(--tracking-mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-1);
+}
+
+.t-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+.t-accent-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-size: 1.04em;
+}
+
+/* ============================================================
+   PRINT — type sizes for research notes, post-market PDFs.
+   (Color overrides live in tokens/tokens.css.)
+   ============================================================ */
+@media print {
+  html, body { background: #fff; color: #0a0d10; }
+  .t-display, h1.t-display { font-size: 36pt; }
+  h1 { font-size: 28pt; }
+  h2 { font-size: 20pt; }
+  h3 { font-size: 16pt; }
+  h4 { font-size: 13pt; }
+  p, .t-body { font-size: 11pt; line-height: 1.45; }
+  .t-mono { font-size: 10pt; }
+  .t-label, .t-eyebrow { font-size: 9pt; }
+}

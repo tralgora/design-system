@@ -1,0 +1,38 @@
+Tralgora Design System — Proprietary License
+
+Copyright (c) 2026 Tralgora. All rights reserved.
+
+This repository and all of its contents — including but not limited to the
+"Tralgora" name, logomark, wordmark, lockups, favicon, OG cards, social
+avatars and templates, the icon sprite, design tokens, type system,
+documentation, and UI kit references (collectively, the "Materials") — are
+the proprietary intellectual property of Tralgora.
+
+You MAY:
+  - View the Materials.
+  - Use the Materials internally to build, document, or operate Tralgora
+    surfaces (web, product, decks, social, internal tools), provided you
+    are an employee, contractor, agent, or authorised partner of Tralgora.
+
+You MAY NOT, without prior written permission from Tralgora:
+  - Use the Tralgora name, logomark, wordmark, lockups, or any brand
+    assets in connection with any product, service, or publication that
+    is not Tralgora's own.
+  - Redistribute, sublicense, sell, or publish the Materials, in whole or
+    in part, including derivative works.
+  - Use the Materials to imply endorsement by, affiliation with, or
+    association with Tralgora.
+
+The design tokens (color values, spacing scale, type scale, etc.) on their
+own are not copyrightable as facts/values, but the curated combination,
+naming, and documentation in this repository are. Don't strip the system
+and ship it as your own.
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+TRALGORA BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM,
+OUT OF, OR IN CONNECTION WITH THE MATERIALS OR THE USE OR OTHER DEALINGS
+IN THE MATERIALS.
+
+For licensing inquiries: legal@tralgora.com

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500" role="img" aria-label="Tralgora — header">
+  
+  <rect width="1500" height="500" fill="oklch(0.16 0.012 250)"></rect>
+
+  
+  <g stroke="oklch(0.27 0.010 250)" stroke-width="1">
+    <path d="M0 100 H1500 M0 200 H1500 M0 300 H1500 M0 400 H1500"></path>
+    <path d="M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500 M800 0 V500 M900 0 V500 M1000 0 V500 M1100 0 V500 M1200 0 V500 M1300 0 V500 M1400 0 V500"></path>
+  </g>
+
+  
+  <rect width="1500" height="500" fill="url(#hdr-fade)"></rect>
+
+  
+  <g transform="translate(1240,80) scale(5)" fill="none" opacity="0.55">
+    <circle cx="6" cy="26" r="1.6" fill="oklch(0.78 0.010 250)"></circle>
+    <path d="M6 18 A8 8 0 0 1 14 26" stroke="oklch(0.78 0.010 250)" stroke-width="1.5" stroke-linecap="round"></path>
+    <path d="M6 12 A14 14 0 0 1 20 26" stroke="oklch(0.78 0.010 250)" stroke-width="1.5" stroke-linecap="round" opacity="0.78"></path>
+    <path d="M6 6  A20 20 0 0 1 26 26" stroke="oklch(0.78 0.010 250)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"></path>
+    <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"></circle>
+  </g>
+
+  
+  
+
+  
+  <text x="380" y="195" font-family="Geist Mono, ui-monospace, monospace" font-size="20" font-weight="500" letter-spacing="3" fill="oklch(0.58 0.012 250)">MARKET INTELLIGENCE · INDIA</text>
+
+  
+  <text x="380" y="265" font-family="Geist, ui-sans-serif, system-ui, sans-serif" font-size="58" font-weight="500" letter-spacing="-1.4" fill="oklch(0.97 0.005 250)">Different styles.</text>
+
+  <text x="380" y="335" font-family="Geist, ui-sans-serif, system-ui, sans-serif" font-size="58" font-weight="500" letter-spacing="-1.4" fill="oklch(0.97 0.005 250)">Same underlying <tspan font-family="Instrument Serif, serif" font-style="italic" fill="oklch(0.82 0.20 155)">market structure.</tspan></text>
+
+  
+  <text x="380" y="400" font-family="Geist Mono, ui-monospace, monospace" font-size="16" font-weight="400" letter-spacing="2" fill="oklch(0.58 0.012 250)">tralgora.com  ·  not advisory  ·  educational</text>
+
+  <defs>
+    <radialGradient id="hdr-fade" cx="40%" cy="55%" r="65%">
+      <stop offset="0%" stop-color="oklch(0.16 0.012 250)" stop-opacity="0"></stop>
+      <stop offset="100%" stop-color="oklch(0.16 0.012 250)" stop-opacity="0.85"></stop>
+    </radialGradient>
+  </defs>
+</svg>

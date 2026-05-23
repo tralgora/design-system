@@ -1,0 +1,179 @@
+/* =============================================================
+   TRALGORA DESIGN TOKENS — canonical source.
+   Pure custom properties only. No selectors, no @font-face.
+   Import this anywhere to inherit the system:
+     @import url("https://unpkg.com/@tralgora/design-system/tokens/tokens.css");
+   ============================================================= */
+
+:root {
+  /* ===== VERSION ===== */
+  --ds-version: "0.1.0";
+
+  /* ===== TYPE FAMILIES ===== */
+  --font-sans:  "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:  "Geist Mono", ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  --font-serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+
+  /* ===== TYPE SCALE ===== */
+  --fs-12: 12px;   --fs-13: 13px;   --fs-14: 14px;   --fs-15: 15px;
+  --fs-16: 16px;   --fs-18: 18px;   --fs-20: 20px;   --fs-24: 24px;
+  --fs-28: 28px;   --fs-36: 36px;   --fs-48: 48px;   --fs-64: 64px;
+  --fs-80: 80px;   --fs-104: 104px;
+
+  /* ===== LINE HEIGHTS ===== */
+  --lh-tight: 1.04;
+  --lh-snug: 1.12;
+  --lh-display: 1.05;
+  --lh-heading: 1.15;
+  --lh-body: 1.5;
+  --lh-mono: 1.35;
+
+  /* ===== TRACKING ===== */
+  --tracking-display: -0.025em;
+  --tracking-heading: -0.018em;
+  --tracking-body: -0.005em;
+  --tracking-mono: 0;
+  --tracking-label: 0.06em;
+  --tracking-eyebrow: 0.14em;
+
+  /* ===== WEIGHTS ===== */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ============================================================
+     COLOR — oklch first
+     ============================================================ */
+
+  /* Surfaces (dark-only v1) */
+  --bg:        oklch(0.16 0.012 250);
+  --surface-1: oklch(0.20 0.014 250);
+  --surface-2: oklch(0.24 0.014 250);
+  --surface-3: oklch(0.28 0.014 250);
+
+  /* Lines */
+  --line:        oklch(0.34 0.012 250);
+  --line-soft:   oklch(0.27 0.010 250);
+  --line-strong: oklch(0.46 0.010 250);
+
+  /* Text */
+  --text-1: oklch(0.97 0.005 250);
+  --text-2: oklch(0.78 0.010 250);
+  --text-3: oklch(0.58 0.012 250);
+  --text-disabled: oklch(0.42 0.010 250);
+
+  /* Strength / active */
+  --green:      oklch(0.82 0.20 155);
+  --green-dim:  oklch(0.58 0.14 155);
+  --green-bg:   oklch(0.32 0.06 155);
+  --green-line: oklch(0.42 0.10 155);
+
+  /* Macro / neutral */
+  --blue:       oklch(0.78 0.14 235);
+  --blue-dim:   oklch(0.55 0.12 235);
+  --blue-bg:    oklch(0.30 0.05 235);
+  --blue-line:  oklch(0.40 0.09 235);
+
+  /* Risk */
+  --red:        oklch(0.72 0.20 25);
+  --red-dim:    oklch(0.52 0.16 25);
+  --red-bg:     oklch(0.30 0.07 25);
+  --red-line:   oklch(0.40 0.12 25);
+
+  /* Caution */
+  --amber:      oklch(0.84 0.16 80);
+  --amber-dim:  oklch(0.60 0.13 80);
+  --amber-bg:   oklch(0.32 0.06 80);
+  --amber-line: oklch(0.42 0.10 80);
+
+  /* Semantic aliases */
+  --positive:     var(--green);
+  --positive-dim: var(--green-dim);
+  --negative:     var(--red);
+  --negative-dim: var(--red-dim);
+  --warning:      var(--amber);
+  --info:         var(--blue);
+  --neutral:      var(--text-3);
+
+  /* Data-viz palette (non-semantic, ordered) */
+  --viz-1: oklch(0.74 0.13 230);
+  --viz-2: oklch(0.74 0.13 195);
+  --viz-3: oklch(0.78 0.12 130);
+  --viz-4: oklch(0.78 0.13 95);
+  --viz-5: oklch(0.74 0.14 50);
+  --viz-6: oklch(0.70 0.15 0);
+  --viz-7: oklch(0.66 0.14 320);
+  --viz-8: oklch(0.66 0.13 270);
+
+  /* ============================================================
+     SPACING — 4px base
+     ============================================================ */
+  --s-4: 4px;     --s-6: 6px;     --s-8: 8px;     --s-10: 10px;
+  --s-12: 12px;   --s-14: 14px;   --s-16: 16px;   --s-18: 18px;
+  --s-20: 20px;   --s-22: 22px;   --s-24: 24px;   --s-28: 28px;
+  --s-32: 32px;   --s-36: 36px;   --s-40: 40px;   --s-48: 48px;
+  --s-56: 56px;   --s-64: 64px;   --s-88: 88px;   --s-100: 100px;
+  --s-120: 120px;
+
+  /* ===== RADII ===== */
+  --r-0: 0;
+  --r-2: 2px;
+  --r-4: 4px;
+  --r-pill: 999px;
+
+  /* ===== BORDERS ===== */
+  --border-1:      1px solid var(--line);
+  --border-soft:   1px solid var(--line-soft);
+  --border-strong: 1px solid var(--line-strong);
+
+  /* ===== ELEVATION ===== */
+  --shadow-float:
+    0 1px 0 0 rgba(255,255,255,0.04) inset,
+    0 8px 24px -8px rgba(0,0,0,0.55),
+    0 2px 4px -1px rgba(0,0,0,0.35);
+
+  /* Focus ring */
+  --ring: 0 0 0 1px var(--bg), 0 0 0 3px var(--green);
+
+  /* ===== MOTION ===== */
+  --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --dur: 0.15s;
+  --transition: all var(--dur) var(--ease);
+
+  /* ===== LAYOUT ===== */
+  --container-max:     1320px;
+  --container-wide:    1100px;
+  --container-default: 980px;
+  --container-narrow:  880px;
+  --container-prose:   720px;
+  --container-tight:   640px;
+  --container-form:    560px;
+  --container-input:   480px;
+}
+
+/* ============================================================
+   PRINT — overrides for research notes, post-market PDFs
+   ============================================================ */
+@media print {
+  :root {
+    --bg: #ffffff;
+    --surface-1: #ffffff;
+    --surface-2: #f6f7f8;
+    --surface-3: #eef0f3;
+    --line: #c8ccd2;
+    --line-soft: #e3e5e9;
+    --line-strong: #8a909a;
+    --text-1: #0a0d10;
+    --text-2: #2c333d;
+    --text-3: #5b626d;
+    --green: #0e7a44;
+    --green-dim: #0a5e35;
+    --blue: #1856a8;
+    --blue-dim: #123e7a;
+    --red: #b8331f;
+    --red-dim: #8a2615;
+    --amber: #8a5a00;
+  }
+}

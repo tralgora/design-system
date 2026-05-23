@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Tralgora avatar">
+  
+  <rect width="400" height="400" rx="80" fill="oklch(0.16 0.012 250)"></rect>
+
+  
+  <g stroke="oklch(0.27 0.010 250)" stroke-width="1" opacity="0.7">
+    <path d="M0 100 H400 M0 200 H400 M0 300 H400"></path>
+    <path d="M100 0 V400 M200 0 V400 M300 0 V400"></path>
+  </g>
+  <rect width="400" height="400" fill="url(#avatar-fade)"></rect>
+
+  
+  <g transform="translate(78,78) scale(7.625)" fill="none">
+    <circle cx="6" cy="26" r="1.6" fill="oklch(0.97 0.005 250)"></circle>
+    <path d="M6 18 A8 8 0 0 1 14 26" stroke="oklch(0.97 0.005 250)" stroke-width="1.5" stroke-linecap="round"></path>
+    <path d="M6 12 A14 14 0 0 1 20 26" stroke="oklch(0.97 0.005 250)" stroke-width="1.5" stroke-linecap="round" opacity="0.78"></path>
+    <path d="M6 6  A20 20 0 0 1 26 26" stroke="oklch(0.97 0.005 250)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"></path>
+    <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"></circle>
+    <circle cx="19.5" cy="11.7" r="2.2" fill="none" stroke="oklch(0.82 0.20 155)" stroke-opacity="0.35" stroke-width="2"></circle>
+  </g>
+
+  <defs>
+    <radialGradient id="avatar-fade" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="oklch(0.16 0.012 250)" stop-opacity="0"></stop>
+      <stop offset="100%" stop-color="oklch(0.16 0.012 250)" stop-opacity="0.85"></stop>
+    </radialGradient>
+  </defs>
+</svg>

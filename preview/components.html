@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Tralgora — Components</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  body { padding: 56px 64px; max-width: 1320px; margin: 0 auto; }
+  header { margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+  header .eye { color: var(--text-3); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; }
+  header h1 { font-size: 56px; font-weight: 500; letter-spacing: -1.2px; line-height: 1.04; margin: 12px 0 8px; }
+  header p { color: var(--text-2); max-width: 680px; }
+  h2 { font-size: 13px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-3); margin: 48px 0 16px; font-weight: 500; }
+
+  .group { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; padding: 24px; background: var(--surface-1); border: 1px solid var(--line); border-radius: 2px; }
+
+  /* === Buttons === */
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 0 16px; height: 40px;
+    font-family: var(--font-sans); font-size: 14px; font-weight: 500;
+    letter-spacing: -0.005em;
+    border: 1px solid var(--line-strong); background: var(--surface-2); color: var(--text-1);
+    border-radius: 2px; cursor: pointer; text-decoration: none;
+    transition: all 0.15s var(--ease, cubic-bezier(0.2,0.6,0.2,1));
+  }
+  .btn:hover { background: var(--surface-3); }
+  .btn-primary { background: var(--green); color: #062014; border-color: var(--green); font-weight: 600; }
+  .btn-primary:hover { background: oklch(0.86 0.20 155); }
+  .btn-ghost { background: transparent; border-color: var(--line); }
+  .btn-sm { height: 32px; padding: 0 12px; font-size: 13px; }
+  .btn-lg { height: 48px; padding: 0 20px; font-size: 15px; }
+  .btn .arrow { display: inline-block; transition: transform 0.15s var(--ease); }
+  .btn:hover .arrow { transform: translateX(2px); }
+  .btn-icon { width: 36px; padding: 0; justify-content: center; }
+
+  /* === Inputs === */
+  .input {
+    display: block; width: 280px;
+    padding: 0 12px; height: 40px;
+    background: var(--surface-2); border: 1px solid var(--line);
+    color: var(--text-1); font-family: inherit; font-size: 14px;
+    border-radius: 2px; outline: none;
+  }
+  .input::placeholder { color: var(--text-3); }
+  .input:focus { border-color: var(--green); box-shadow: 0 0 0 3px oklch(0.32 0.06 155); }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); }
+
+  /* === Chips === */
+  .chip { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; padding: 4px 10px; border-radius: 999px; border: 1px solid; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; }
+  .chip .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .chip.pos { color: var(--green); border-color: var(--green-line); background: var(--green-bg); }
+  .chip.pos .dot { background: var(--green); }
+  .chip.neg { color: var(--red); border-color: var(--red-line); background: var(--red-bg); }
+  .chip.neg .dot { background: var(--red); }
+  .chip.neu { color: var(--blue); border-color: var(--blue-line); background: var(--blue-bg); }
+  .chip.neu .dot { background: var(--blue); }
+  .chip.war { color: var(--amber); border-color: var(--amber-line); background: var(--amber-bg); }
+  .chip.war .dot { background: var(--amber); }
+  .chip.muted { color: var(--text-3); border-color: var(--line); background: var(--surface-2); }
+  .chip.muted .dot { background: var(--text-3); }
+
+  /* === Radar Card === */
+  .radar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .rcard {
+    background: var(--surface-1); border: 1px solid var(--line);
+    border-radius: 2px; padding: 22px; position: relative; overflow: hidden;
+  }
+  .rcard::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--green); }
+  .rcard.is-warning::before { background: var(--amber); }
+  .rcard.is-risk::before { background: var(--red); }
+  .rcard.is-info::before { background: var(--blue); }
+  .rcard .row1 { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .rcard .row1 .ic { width: 22px; height: 22px; color: var(--text-3); }
+  .rcard .row1 .name { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); }
+  .rcard .row1 .chip { margin-left: auto; }
+  .rcard h3 { font-size: 22px; font-weight: 500; letter-spacing: -0.4px; margin-bottom: 10px; }
+  .rcard h3 em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--green); }
+  .rcard p { font-size: 14px; color: var(--text-2); line-height: 1.5; }
+  .rcard .stats { display: flex; gap: 24px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line-soft); font-family: var(--font-mono); font-size: 12px; }
+  .rcard .stats .k { color: var(--text-3); letter-spacing: 0.06em; text-transform: uppercase; }
+  .rcard .stats .v { color: var(--text-1); margin-left: 8px; font-variant-numeric: tabular-nums; }
+
+  /* === Table === */
+  .ttable { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .ttable th { text-align: left; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); font-weight: 500; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+  .ttable th.r, .ttable td.r { text-align: right; }
+  .ttable td { padding: 12px 16px; border-bottom: 1px solid var(--line-soft); color: var(--text-1); font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .ttable tr:hover td { background: var(--surface-2); }
+  .ttable .sec { color: var(--text-2); font-family: var(--font-sans); font-size: 14px; }
+  .pos-t { color: var(--green); }
+  .neg-t { color: var(--red); }
+
+  /* === Form === */
+  .form { background: var(--surface-1); border: 1px solid var(--line); padding: 28px; border-radius: 2px; max-width: 520px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .form .input { width: 100%; }
+  .seg { display: inline-flex; padding: 2px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 2px; }
+  .seg button { background: transparent; border: 0; color: var(--text-3); font-family: var(--font-mono); font-size: 12px; padding: 6px 12px; cursor: pointer; letter-spacing: 0.04em; text-transform: uppercase; }
+  .seg button.on { background: var(--surface-3); color: var(--text-1); border-radius: 2px; }
+  .micro { font-family: var(--font-mono); font-size: 11px; color: var(--text-3); margin-top: 10px; letter-spacing: 0.04em; }
+
+  /* === Sparkline === */
+  .spark { height: 32px; width: 80px; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="eye">Components · Foundations</div>
+    <h1>Buttons, chips, radar cards, forms.</h1>
+    <p>The component vocabulary the rest of the system is built from. Everything is composed from a tight set of primitives — borders not shadows, mono for data, sans for prose, one accent italic per page.</p>
+  </header>
+
+  <h2>Buttons</h2>
+  <div class="group">
+    <button class="btn btn-primary">Get the Morning Radar <span class="arrow">→</span></button>
+    <button class="btn">View Sample Radar</button>
+    <button class="btn btn-ghost">Read brief</button>
+    <button class="btn btn-sm">Subscribe</button>
+    <button class="btn btn-lg btn-primary">Join Early Access <span class="arrow">→</span></button>
+    <button class="btn btn-icon" aria-label="settings">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
+    </button>
+  </div>
+
+  <h2>Inputs</h2>
+  <div class="group" style="gap: 24px;">
+    <div class="field"><label>Email</label><input class="input" placeholder="you@firm.com"/></div>
+    <div class="field"><label>WhatsApp</label><input class="input" placeholder="+91 98XXXXXXXX"/></div>
+    <div class="field"><label>Style</label>
+      <div class="seg">
+        <button class="on">Intraday</button><button>Swing</button><button>Positional</button><button>Investing</button>
+      </div>
+    </div>
+  </div>
+
+  <h2>Status chips</h2>
+  <div class="group">
+    <span class="chip pos"><span class="dot"></span>Constructive</span>
+    <span class="chip pos"><span class="dot"></span>Breadth +</span>
+    <span class="chip pos"><span class="dot"></span>RS leading</span>
+    <span class="chip neu"><span class="dot"></span>Macro neutral</span>
+    <span class="chip neu"><span class="dot"></span>Range</span>
+    <span class="chip war"><span class="dot"></span>Narrowing</span>
+    <span class="chip war"><span class="dot"></span>Event risk</span>
+    <span class="chip neg"><span class="dot"></span>Risk-off</span>
+    <span class="chip neg"><span class="dot"></span>Distribution</span>
+    <span class="chip muted"><span class="dot"></span>Flat</span>
+  </div>
+
+  <h2>Radar cards</h2>
+  <div class="radar-grid">
+    <div class="rcard">
+      <div class="row1">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M5 7c2 1.5 4 2.5 7 2.5S17.5 8.5 19 7"/><path d="M5 17c2-1.5 4-2.5 7-2.5s5.5 1 7 2.5"/></svg>
+        <span class="name">Regime</span>
+        <span class="chip pos"><span class="dot"></span>Constructive</span>
+      </div>
+      <h3>Strength is <em>broadening</em>.</h3>
+      <p>Breadth above 200d MA is at 64%. Leadership is rotating into Defence and Capital Goods after a 3-day base.</p>
+      <div class="stats">
+        <div><span class="k">Breadth</span><span class="v">64%</span></div>
+        <div><span class="k">RS 5d</span><span class="v">+1.4σ</span></div>
+        <div><span class="k">VIX</span><span class="v">13.42</span></div>
+      </div>
+    </div>
+
+    <div class="rcard is-info">
+      <div class="row1">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 3 4 6 4 9s-1.5 6-4 9c-2.5-3-4-6-4-9s1.5-6 4-9z"/></svg>
+        <span class="name">Macro pressure</span>
+        <span class="chip neu"><span class="dot"></span>Neutral</span>
+      </div>
+      <h3>FII selling absorbed by DII.</h3>
+      <p>FIIs net negative ₹842 cr in cash; DIIs net positive ₹1,205 cr. Crude flat, INR steady. No event risk in the next 48 hours.</p>
+      <div class="stats">
+        <div><span class="k">FII</span><span class="v">-842</span></div>
+        <div><span class="k">DII</span><span class="v">+1,205</span></div>
+        <div><span class="k">Crude</span><span class="v">$82.1</span></div>
+      </div>
+    </div>
+
+    <div class="rcard is-warning">
+      <div class="row1">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19V9"/><path d="M8 19V5"/><path d="M13 19v-9"/><path d="M18 19V7"/><path d="M2 21h20"/></svg>
+        <span class="name">Participation</span>
+        <span class="chip war"><span class="dot"></span>Narrowing</span>
+      </div>
+      <h3>Rally is index-led, not broad.</h3>
+      <p>Advances/declines flat despite a +0.4% Nifty close. Strength is concentrated in 3 stocks; below the surface most names are flat to weak.</p>
+      <div class="stats">
+        <div><span class="k">A/D</span><span class="v">1.04</span></div>
+        <div><span class="k">% > 20d</span><span class="v">48%</span></div>
+        <div><span class="k">Conc.</span><span class="v">3 names</span></div>
+      </div>
+    </div>
+
+    <div class="rcard is-risk">
+      <div class="row1">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 4v6c0 5-4 8-9 9-5-1-9-4-9-9V7z"/><path d="M12 9v4"/><path d="M12 16h.01"/></svg>
+        <span class="name">Risk note</span>
+        <span class="chip neg"><span class="dot"></span>Watch</span>
+      </div>
+      <h3>VIX base is hardening.</h3>
+      <p>VIX has held above its 20d average for six sessions. If macro headlines turn, the cushion compresses fast — size positions accordingly.</p>
+      <div class="stats">
+        <div><span class="k">VIX</span><span class="v">13.42</span></div>
+        <div><span class="k">20d</span><span class="v">12.1</span></div>
+        <div><span class="k">Δ</span><span class="v">+10.9%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Theme leadership table</h2>
+  <div style="background: var(--surface-1); border: 1px solid var(--line); border-radius: 2px;">
+    <table class="ttable">
+      <thead>
+        <tr>
+          <th>Theme</th>
+          <th class="r">RS 5d</th>
+          <th class="r">RS 20d</th>
+          <th class="r">Breadth</th>
+          <th>Trend</th>
+          <th class="r">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="sec">Defence</td><td class="r pos-t">+2.14σ</td><td class="r pos-t">+1.62σ</td><td class="r">82%</td><td><svg class="spark" viewBox="0 0 80 32" preserveAspectRatio="none"><polyline fill="none" stroke="oklch(0.82 0.20 155)" stroke-width="1.5" points="0,28 10,24 20,22 30,20 40,16 50,12 60,10 70,6 80,4"/></svg></td><td class="r"><span class="chip pos"><span class="dot"></span>Leading</span></td></tr>
+        <tr><td class="sec">Capital Goods</td><td class="r pos-t">+1.42σ</td><td class="r pos-t">+0.98σ</td><td class="r">71%</td><td><svg class="spark" viewBox="0 0 80 32" preserveAspectRatio="none"><polyline fill="none" stroke="oklch(0.82 0.20 155)" stroke-width="1.5" points="0,26 10,22 20,24 30,18 40,16 50,14 60,12 70,10 80,8"/></svg></td><td class="r"><span class="chip pos"><span class="dot"></span>Leading</span></td></tr>
+        <tr><td class="sec">Power</td><td class="r pos-t">+0.84σ</td><td class="r pos-t">+0.42σ</td><td class="r">58%</td><td><svg class="spark" viewBox="0 0 80 32" preserveAspectRatio="none"><polyline fill="none" stroke="oklch(0.74 0.13 230)" stroke-width="1.5" points="0,22 10,20 20,18 30,20 40,16 50,18 60,14 70,16 80,12"/></svg></td><td class="r"><span class="chip neu"><span class="dot"></span>Inline</span></td></tr>
+        <tr><td class="sec">Financials</td><td class="r"><span style="color: var(--text-3);">+0.12σ</span></td><td class="r pos-t">+0.34σ</td><td class="r">52%</td><td><svg class="spark" viewBox="0 0 80 32" preserveAspectRatio="none"><polyline fill="none" stroke="oklch(0.74 0.13 230)" stroke-width="1.5" points="0,18 10,20 20,16 30,18 40,16 50,18 60,14 70,18 80,16"/></svg></td><td class="r"><span class="chip muted"><span class="dot"></span>Inline</span></td></tr>
+        <tr><td class="sec">Auto</td><td class="r neg-t">-0.62σ</td><td class="r"><span style="color: var(--text-3);">+0.08σ</span></td><td class="r">42%</td><td><svg class="spark" viewBox="0 0 80 32" preserveAspectRatio="none"><polyline fill="none" stroke="oklch(0.84 0.16 80)" stroke-width="1.5" points="0,12 10,14 20,12 30,14 40,18 50,16 60,20 70,18 80,22"/></svg></td><td class="r"><span class="chip war"><span class="dot"></span>Cooling</span></td></tr>
+        <tr><td class="sec">Pharma</td><td class="r neg-t">-1.28σ</td><td class="r neg-t">-0.74σ</td><td class="r">28%</td><td><svg class="spark" viewBox="0 0 80 32" preserveAspectRatio="none"><polyline fill="none" stroke="oklch(0.72 0.20 25)" stroke-width="1.5" points="0,8 10,10 20,12 30,14 40,18 50,16 60,22 70,24 80,26"/></svg></td><td class="r"><span class="chip neg"><span class="dot"></span>Lagging</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Lead capture form</h2>
+  <div class="group" style="background: transparent; border: 0; padding: 0;">
+    <div class="form">
+      <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 18px;">Get the Morning Radar — free sample</div>
+      <div class="form-row">
+        <div class="field"><label>Name</label><input class="input" placeholder="Aarav Mehta"/></div>
+        <div class="field"><label>Email</label><input class="input" placeholder="you@firm.com"/></div>
+      </div>
+      <div class="form-row" style="grid-template-columns: 1fr;">
+        <div class="field"><label>WhatsApp</label><input class="input" placeholder="+91 98XXXXXXXX"/></div>
+      </div>
+      <div class="field" style="margin-bottom: 16px;"><label>Trading style</label>
+        <div class="seg" style="margin-top: 4px;">
+          <button class="on">Intraday</button><button>Swing</button><button>Positional</button><button>Investing</button><button>Algo</button>
+        </div>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;">Send me the sample radar <span class="arrow">→</span></button>
+      <div class="micro">No spam. No tips. Just market structure.</div>
+    </div>
+  </div>
+</body>
+</html>

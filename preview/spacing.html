@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Tralgora — Spacing & Radii</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  body { padding: 56px 64px; max-width: 1320px; margin: 0 auto; }
+  header { margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+  header .eye { color: var(--text-3); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; }
+  header h1 { font-size: 56px; font-weight: 500; letter-spacing: -1.2px; line-height: 1.04; margin: 12px 0 8px; }
+  header p { color: var(--text-2); max-width: 680px; }
+  h2 { font-size: 13px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-3); margin: 56px 0 16px; font-weight: 500; }
+  .scale { display: grid; grid-template-columns: 90px 90px 1fr; gap: 16px 24px; align-items: center; }
+  .scale .name { font-family: var(--font-mono); font-size: 13px; color: var(--text-1); }
+  .scale .px { font-family: var(--font-mono); font-size: 12px; color: var(--text-3); }
+  .scale .bar { height: 18px; background: var(--green); border-radius: 1px; }
+  .radii { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .radii .card { padding: 24px; background: var(--surface-1); border: 1px solid var(--line); }
+  .radii .card .swatch { height: 64px; background: var(--surface-3); border: 1px solid var(--line); margin-bottom: 14px; }
+  .radii .card .name { font-family: var(--font-mono); font-size: 12px; color: var(--text-1); }
+  .radii .card .desc { font-size: 13px; color: var(--text-3); margin-top: 4px; line-height: 1.4; }
+  .layouts { display: grid; gap: 12px; }
+  .layouts .row { display: grid; grid-template-columns: 200px 90px 1fr; gap: 16px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line-soft); }
+  .layouts .row:first-of-type { border-top: 1px solid var(--line); }
+  .layouts .name { font-family: var(--font-mono); font-size: 12px; color: var(--text-1); }
+  .layouts .px { font-family: var(--font-mono); font-size: 12px; color: var(--text-3); }
+  .layouts .bar { height: 8px; background: var(--surface-2); border: 1px solid var(--line); }
+  .layouts .bar .fill { height: 100%; background: var(--blue-dim); }
+  .density { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .density .panel { background: var(--surface-1); border: 1px solid var(--line); padding: 24px; }
+  .density .panel .lbl { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
+  .density .panel .item { display: flex; justify-content: space-between; padding: 10px 0; border-top: 1px dashed var(--line-soft); font-family: var(--font-mono); font-size: 13px; }
+  .density .panel.dense .item { padding: 6px 0; font-size: 12px; }
+  .density .panel .item:first-of-type { border-top: 0; }
+  .density .panel .v { color: var(--text-1); }
+  .density .panel .k { color: var(--text-3); }
+  .shadow-demo { margin-top: 24px; background: var(--bg); padding: 56px; border: 1px solid var(--line); border-radius: 2px; }
+  .toast { display: inline-flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--surface-3); border: 1px solid var(--line-strong); border-radius: 2px; box-shadow: var(--shadow-float); }
+  .toast .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+  .toast .txt { font-size: 14px; color: var(--text-1); }
+  .toast .meta { font-family: var(--font-mono); font-size: 12px; color: var(--text-3); }
+</style>
+</head>
+<body>
+  <header>
+    <div class="eye">Spacing · Radii · Elevation</div>
+    <h1>4px grid. Sharp corners. <span style="font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--green);">Hairlines.</span></h1>
+    <p>Spacing is on a 4px scale. Radii are intentionally tight (2px default, 4px for big panels) so the system reads more terminal than consumer-app. Borders carry hierarchy; shadows are reserved for floating UI only.</p>
+  </header>
+
+  <h2>Spacing scale</h2>
+  <div class="scale">
+    <div class="name">--s-4</div><div class="px">4 px</div><div class="bar" style="width: 4px;"></div>
+    <div class="name">--s-8</div><div class="px">8 px</div><div class="bar" style="width: 8px;"></div>
+    <div class="name">--s-12</div><div class="px">12 px</div><div class="bar" style="width: 12px;"></div>
+    <div class="name">--s-16</div><div class="px">16 px</div><div class="bar" style="width: 16px;"></div>
+    <div class="name">--s-20</div><div class="px">20 px</div><div class="bar" style="width: 20px;"></div>
+    <div class="name">--s-24</div><div class="px">24 px</div><div class="bar" style="width: 24px;"></div>
+    <div class="name">--s-32</div><div class="px">32 px</div><div class="bar" style="width: 32px;"></div>
+    <div class="name">--s-40</div><div class="px">40 px</div><div class="bar" style="width: 40px;"></div>
+    <div class="name">--s-48</div><div class="px">48 px</div><div class="bar" style="width: 48px;"></div>
+    <div class="name">--s-64</div><div class="px">64 px</div><div class="bar" style="width: 64px;"></div>
+    <div class="name">--s-88</div><div class="px">88 px</div><div class="bar" style="width: 88px;"></div>
+    <div class="name">--s-120</div><div class="px">120 px</div><div class="bar" style="width: 120px;"></div>
+  </div>
+
+  <h2>Radii</h2>
+  <div class="radii">
+    <div class="card"><div class="swatch" style="border-radius: 0;"></div><div class="name">--r-0</div><div class="desc">Tables, dense data rows.</div></div>
+    <div class="card"><div class="swatch" style="border-radius: 2px;"></div><div class="name">--r-2 · default</div><div class="desc">Cards, buttons, inputs.</div></div>
+    <div class="card"><div class="swatch" style="border-radius: 4px;"></div><div class="name">--r-4</div><div class="desc">Larger panels, modals.</div></div>
+    <div class="card"><div class="swatch" style="border-radius: 999px;"></div><div class="name">--r-pill</div><div class="desc">Status chips, segmented toggles.</div></div>
+  </div>
+
+  <h2>Layout containers</h2>
+  <div class="layouts">
+    <div class="row"><div class="name">--container-input</div><div class="px">480 px</div><div class="bar"><div class="fill" style="width: 36%;"></div></div></div>
+    <div class="row"><div class="name">--container-form</div><div class="px">560 px</div><div class="bar"><div class="fill" style="width: 42%;"></div></div></div>
+    <div class="row"><div class="name">--container-tight</div><div class="px">640 px</div><div class="bar"><div class="fill" style="width: 49%;"></div></div></div>
+    <div class="row"><div class="name">--container-prose</div><div class="px">720 px</div><div class="bar"><div class="fill" style="width: 55%;"></div></div></div>
+    <div class="row"><div class="name">--container-narrow</div><div class="px">880 px</div><div class="bar"><div class="fill" style="width: 67%;"></div></div></div>
+    <div class="row"><div class="name">--container-default</div><div class="px">980 px</div><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
+    <div class="row"><div class="name">--container-wide</div><div class="px">1100 px</div><div class="bar"><div class="fill" style="width: 84%;"></div></div></div>
+    <div class="row"><div class="name">--container-max</div><div class="px">1320 px</div><div class="bar"><div class="fill" style="width: 100%;"></div></div></div>
+  </div>
+
+  <h2>Density rhythm</h2>
+  <div class="density">
+    <div class="panel">
+      <div class="lbl">Public mode · row 12px</div>
+      <div class="item"><span class="k">Regime</span><span class="v">Constructive</span></div>
+      <div class="item"><span class="k">Breadth</span><span class="v">64%</span></div>
+      <div class="item"><span class="k">Leadership</span><span class="v">Defence · Capital Goods</span></div>
+      <div class="item"><span class="k">VIX</span><span class="v">13.42</span></div>
+    </div>
+    <div class="panel dense">
+      <div class="lbl">Operator mode · row 6px</div>
+      <div class="item"><span class="k">REGIME</span><span class="v">CONSTRUCTIVE</span></div>
+      <div class="item"><span class="k">BREADTH_200D</span><span class="v">0.6412</span></div>
+      <div class="item"><span class="k">RS_5D</span><span class="v">+1.42σ</span></div>
+      <div class="item"><span class="k">LEAD_SECTORS</span><span class="v">DEF, CAPGOODS</span></div>
+      <div class="item"><span class="k">VIX</span><span class="v">13.42</span></div>
+      <div class="item"><span class="k">FII_NET_CR</span><span class="v">+842</span></div>
+      <div class="item"><span class="k">DII_NET_CR</span><span class="v">+1,205</span></div>
+    </div>
+  </div>
+
+  <h2>Elevation — floating only</h2>
+  <p style="color: var(--text-2); max-width: 640px; font-size: 14px;">Cards and panels never carry shadows; they rely on borders. Shadow is reserved for elements that genuinely float over content: toasts, popovers, dropdowns. One token covers all of them.</p>
+  <div class="shadow-demo">
+    <div class="toast">
+      <span class="dot"></span>
+      <span class="txt">Sample radar sent to your inbox</span>
+      <span class="meta">2s</span>
+    </div>
+  </div>
+</body>
+</html>

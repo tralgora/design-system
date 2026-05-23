@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Tralgora — Brand</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  body { padding: 56px 64px; max-width: 1320px; margin: 0 auto; }
+  header { margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+  header .eye { color: var(--text-3); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; }
+  header h1 { font-size: 56px; font-weight: 500; letter-spacing: -1.2px; line-height: 1.04; margin: 12px 0 8px; }
+  header p { color: var(--text-2); max-width: 680px; }
+  h2 { font-size: 13px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-3); margin: 56px 0 16px; font-weight: 500; }
+
+  .lockups { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .lockup { padding: 40px; background: var(--surface-1); border: 1px solid var(--line); border-radius: 2px; display: flex; align-items: center; justify-content: center; min-height: 160px; color: var(--text-1); }
+  .lockup.sm { min-height: 120px; }
+  .lockup.light { background: #ffffff; color: #0a0d10; }
+  .lockup-cell { display: flex; flex-direction: column; gap: 16px; }
+  .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); }
+
+  .scale-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; align-items: end; padding: 32px; background: var(--surface-1); border: 1px solid var(--line); border-radius: 2px; color: var(--text-1); }
+  .scale-row .item { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .scale-row .px { font-family: var(--font-mono); font-size: 11px; color: var(--text-3); letter-spacing: 0.06em; }
+
+  .icons { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; }
+  .ic-cell { aspect-ratio: 1; background: var(--surface-1); border: 1px solid var(--line); border-radius: 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--text-1); padding: 16px 8px; }
+  .ic-cell svg { width: 28px; height: 28px; }
+  .ic-cell .name { font-family: var(--font-mono); font-size: 10px; color: var(--text-3); letter-spacing: 0.04em; }
+
+  .clearspace { padding: 32px; background: var(--surface-1); border: 1px solid var(--line); border-radius: 2px; color: var(--text-1); }
+  .clearspace .frame { position: relative; display: inline-flex; align-items: center; justify-content: center; }
+  .clearspace .frame::before { content: ""; position: absolute; inset: -32px; border: 1px dashed var(--line); border-radius: 2px; pointer-events: none; }
+  .clearspace .frame::after { content: "32 px (= mark height)"; position: absolute; top: -56px; left: 50%; transform: translateX(-50%); font-family: var(--font-mono); font-size: 11px; color: var(--text-3); letter-spacing: 0.06em; white-space: nowrap; }
+
+  .voice { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .voice .card { padding: 24px; border: 1px solid var(--line); border-radius: 2px; background: var(--surface-1); }
+  .voice .ok { border-left: 2px solid var(--green); }
+  .voice .nope { border-left: 2px solid var(--red); }
+  .voice h3 { font-size: 16px; font-weight: 500; margin-bottom: 14px; color: var(--text-1); }
+  .voice ul { list-style: none; padding: 0; margin: 0; }
+  .voice li { font-size: 14px; color: var(--text-2); padding: 10px 0; border-top: 1px dashed var(--line-soft); display: flex; gap: 10px; align-items: flex-start; }
+  .voice li:first-child { border-top: 0; }
+  .voice li::before { content: "→"; color: var(--text-3); font-family: var(--font-mono); flex: 0 0 auto; }
+  .voice .nope li::before { content: "✕"; color: var(--red-dim); }
+
+  .og-wrap { background: var(--surface-1); border: 1px solid var(--line); padding: 32px; border-radius: 2px; }
+  .og-wrap img { max-width: 100%; display: block; border: 1px solid var(--line); border-radius: 2px; }
+
+  .principle { padding: 56px 40px; border: 1px solid var(--line); border-radius: 2px; background: var(--surface-1); margin-top: 32px; text-align: center; }
+  .principle .e { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
+  .principle h2 { font-size: 48px; font-weight: 500; letter-spacing: -1px; line-height: 1.1; color: var(--text-1); margin: 0; }
+  .principle h2 em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--green); }
+  .principle .sub { color: var(--text-3); font-family: var(--font-mono); font-size: 13px; margin-top: 18px; letter-spacing: 0.04em; }
+
+  .nav-banner { background: var(--surface-2); border: 1px solid var(--line); padding: 16px 24px; border-radius: 2px; display: flex; gap: 16px; align-items: center; font-size: 13px; color: var(--text-2); margin-bottom: 32px; }
+  .nav-banner a { color: var(--green); text-decoration: none; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; }
+  .nav-banner a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="eye">Brand</div>
+    <h1>Logo, lockups, icons, <span style="font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--green);">voice.</span></h1>
+    <p>The current Tralgora mark — concentric arcs anchored bottom-left, with a single bright node along the mid-arc as the leadership pulse. Wordmark is Geist Medium, locked tracking. The middot lockup carries product names: <span style="font-family: var(--font-mono); font-size: 14px;">Tralgora · Radar</span>.</p>
+  </header>
+
+  <div class="nav-banner">
+    <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3);">Heads up</span>
+    <span>Six new umbrella-brand logo directions are in review →</span>
+    <a href="../explorations/logo-round-2.html">explorations/logo-round-2.html</a>
+  </div>
+
+  <div class="principle">
+    <div class="e">Brand principle</div>
+    <h2>Different styles. Same underlying <em>structure.</em></h2>
+    <div class="sub">Market intelligence today.&nbsp;&nbsp;Systematic execution tomorrow.</div>
+  </div>
+
+  <h2>Lockups</h2>
+  <div class="lockups">
+    <div class="lockup-cell">
+      <div class="label">Primary lockup — dark</div>
+      <div class="lockup">
+        <svg viewBox="0 0 240 32" width="240" height="32" fill="none" aria-label="Tralgora">
+          <circle cx="6" cy="26" r="1.6" fill="currentColor"/>
+          <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"/>
+          <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"/>
+          <text x="40" y="24" font-family="Geist, ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="500" letter-spacing="-0.5" fill="currentColor">Tralgora</text>
+        </svg>
+      </div>
+    </div>
+    <div class="lockup-cell">
+      <div class="label">Primary lockup — light</div>
+      <div class="lockup light">
+        <svg viewBox="0 0 240 32" width="240" height="32" fill="none" aria-label="Tralgora">
+          <circle cx="6" cy="26" r="1.6" fill="currentColor"/>
+          <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"/>
+          <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.62 0.16 155)"/>
+          <text x="40" y="24" font-family="Geist, ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="500" letter-spacing="-0.5" fill="currentColor">Tralgora</text>
+        </svg>
+      </div>
+    </div>
+    <div class="lockup-cell">
+      <div class="label">Product lockup — Tralgora · Radar</div>
+      <div class="lockup">
+        <svg viewBox="0 0 320 32" width="320" height="32" fill="none" aria-label="Tralgora · Radar">
+          <circle cx="6" cy="26" r="1.6" fill="currentColor"/>
+          <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"/>
+          <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"/>
+          <text x="40" y="24" font-family="Geist, ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="500" letter-spacing="-0.5" fill="currentColor">Tralgora</text>
+          <circle cx="153" cy="17" r="1.6" fill="currentColor" opacity="0.5"/>
+          <text x="164" y="23" font-family="Geist Mono, ui-monospace, monospace" font-size="18" font-weight="500" letter-spacing="-0.2" fill="currentColor" opacity="0.78">Radar</text>
+        </svg>
+      </div>
+    </div>
+    <div class="lockup-cell">
+      <div class="label">Mark only — favicon / app icon</div>
+      <div class="lockup sm" style="gap: 32px;">
+        <svg viewBox="0 0 32 32" width="64" height="64" fill="none">
+          <circle cx="6" cy="26" r="1.6" fill="currentColor"/>
+          <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"/>
+          <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"/>
+        </svg>
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="none">
+          <circle cx="6" cy="26" r="1.6" fill="currentColor"/>
+          <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"/>
+          <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"/>
+        </svg>
+        <svg viewBox="0 0 16 16" width="16" height="16" fill="none">
+          <rect width="16" height="16" rx="2" fill="oklch(0.16 0.012 250)"/>
+          <circle cx="3.5" cy="12.5" r="0.9" fill="oklch(0.97 0.005 250)"/>
+          <path d="M3.5 9 A5.5 5.5 0 0 1 9 14.5" stroke="oklch(0.97 0.005 250)" stroke-width="1" stroke-linecap="round"/>
+          <path d="M3.5 6 A9 9 0 0 1 12.5 14.5" stroke="oklch(0.97 0.005 250)" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+          <circle cx="10.2" cy="6.6" r="1.4" fill="oklch(0.82 0.20 155)"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <h2>Sizing — mark on dark</h2>
+  <div class="scale-row">
+    <div class="item">
+      <svg viewBox="0 0 32 32" width="16" height="16" fill="none">
+        <circle cx="6" cy="26" r="1.6" fill="currentColor"/>
+        <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"/>
+        <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"/>
+      </svg>
+      <div class="px">16 px · favicon</div>
+    </div>
+    <div class="item">
+      <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+        <circle cx="6" cy="26" r="1.6" fill="currentColor"/>
+        <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"/>
+        <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"/>
+      </svg>
+      <div class="px">24 px · header</div>
+    </div>
+    <div class="item">
+      <svg viewBox="0 0 32 32" width="48" height="48" fill="none">
+        <circle cx="6" cy="26" r="1.6" fill="currentColor"/>
+        <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"/>
+        <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"/>
+      </svg>
+      <div class="px">48 px · email</div>
+    </div>
+    <div class="item">
+      <svg viewBox="0 0 32 32" width="96" height="96" fill="none">
+        <circle cx="6" cy="26" r="1.6" fill="currentColor"/>
+        <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"/>
+        <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"/>
+      </svg>
+      <div class="px">96 px · footer</div>
+    </div>
+    <div class="item">
+      <svg viewBox="0 0 32 32" width="144" height="144" fill="none">
+        <circle cx="6" cy="26" r="1.6" fill="currentColor"/>
+        <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"/>
+        <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"/>
+      </svg>
+      <div class="px">144 px · hero</div>
+    </div>
+  </div>
+
+  <h2>Clear space</h2>
+  <div class="clearspace" style="padding-top: 80px;">
+    <div class="frame">
+      <svg viewBox="0 0 240 32" width="240" height="32" fill="none">
+        <circle cx="6" cy="26" r="1.6" fill="currentColor"/>
+        <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"/>
+        <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"/>
+        <text x="40" y="24" font-family="Geist, ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="500" letter-spacing="-0.5" fill="currentColor">Tralgora</text>
+      </svg>
+    </div>
+    <p style="font-size: 14px; color: var(--text-2); margin-top: 56px; max-width: 520px;">Minimum clear space on all sides equals the height of the mark (32px at default). Inside this margin: nothing — no rules, no copy, no other logos.</p>
+  </div>
+
+  <h2>Icons (24 px · 1.5 stroke)</h2>
+  <svg width="0" height="0" style="position:absolute"><use href="../assets/icons/icons.svg#regime"/></svg>
+  <div class="icons">
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#regime"/></svg><span class="name">regime</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#themes"/></svg><span class="name">themes</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#participation"/></svg><span class="name">participation</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#leadership"/></svg><span class="name">leadership</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#macro"/></svg><span class="name">macro</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#feedback"/></svg><span class="name">feedback</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#intraday"/></svg><span class="name">intraday</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#swing"/></svg><span class="name">swing</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#positional"/></svg><span class="name">positional</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#investing"/></svg><span class="name">investing</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#algo"/></svg><span class="name">algo</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#strategy"/></svg><span class="name">strategy</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#backtest"/></svg><span class="name">backtest</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#paper-trade"/></svg><span class="name">paper</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#live-trade"/></svg><span class="name">live</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#position"/></svg><span class="name">position</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#order"/></svg><span class="name">order</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#risk-limit"/></svg><span class="name">risk-limit</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#kill-switch"/></svg><span class="name">kill</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#replay"/></svg><span class="name">replay</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#alert"/></svg><span class="name">alert</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#search"/></svg><span class="name">search</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#filter"/></svg><span class="name">filter</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#email"/></svg><span class="name">email</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#whatsapp"/></svg><span class="name">whatsapp</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#external"/></svg><span class="name">external</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#info"/></svg><span class="name">info</span></div>
+    <div class="ic-cell"><svg viewBox="0 0 24 24"><use href="../assets/icons/icons.svg#lock"/></svg><span class="name">lock</span></div>
+  </div>
+
+  <h2>OG / social card</h2>
+  <div class="og-wrap">
+    <img src="../assets/logo/og-card.svg" alt="Tralgora OG card" style="width: 100%; max-width: 1000px;"/>
+  </div>
+
+  <h2>Voice — what we say, what we don't</h2>
+  <div class="voice">
+    <div class="card ok">
+      <h3>Say</h3>
+      <ul>
+        <li>"Strength is broadening into Defence and Capital Goods."</li>
+        <li>"Breadth above 200d is at 64% — leadership has space to extend."</li>
+        <li>"FII selling absorbed by DII; macro pressure is neutral."</li>
+        <li>"This is a framework, not a tip."</li>
+        <li>"Educational and informational only."</li>
+      </ul>
+    </div>
+    <div class="card nope">
+      <h3>Never say</h3>
+      <ul>
+        <li>"Buy XYZ at ₹420, target 480, SL 405."</li>
+        <li>"Sure-shot multibagger for 2026."</li>
+        <li>"Guaranteed 12% in 30 days."</li>
+        <li>"Our calls have 92% accuracy."</li>
+        <li>"Personalised investment advice."</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

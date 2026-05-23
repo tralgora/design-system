@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Tralgora post — what we are not">
+  <rect width="1600" height="900" fill="oklch(0.16 0.012 250)"></rect>
+  <g stroke="oklch(0.27 0.010 250)" stroke-width="1">
+    <path d="M0 150 H1600 M0 300 H1600 M0 450 H1600 M0 600 H1600 M0 750 H1600"></path>
+    <path d="M120 0 V900 M240 0 V900 M360 0 V900 M480 0 V900 M600 0 V900 M720 0 V900 M840 0 V900 M960 0 V900 M1080 0 V900 M1200 0 V900 M1320 0 V900 M1440 0 V900"></path>
+  </g>
+  <rect width="1600" height="900" fill="url(#p3-fade)"></rect>
+
+  <g transform="translate(80,80)">
+    <g fill="none">
+      <circle cx="6" cy="26" r="1.6" fill="oklch(0.97 0.005 250)"></circle>
+      <path d="M6 18 A8 8 0 0 1 14 26" stroke="oklch(0.97 0.005 250)" stroke-width="1.5" stroke-linecap="round"></path>
+      <path d="M6 12 A14 14 0 0 1 20 26" stroke="oklch(0.97 0.005 250)" stroke-width="1.5" stroke-linecap="round" opacity="0.78"></path>
+      <path d="M6 6  A20 20 0 0 1 26 26" stroke="oklch(0.97 0.005 250)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"></path>
+      <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"></circle>
+    </g>
+    <text x="42" y="24" font-family="Geist, sans-serif" font-size="22" font-weight="500" letter-spacing="-0.5" fill="oklch(0.97 0.005 250)">Tralgora</text>
+  </g>
+
+  <text x="1520" y="104" text-anchor="end" font-family="Geist Mono, monospace" font-size="18" letter-spacing="2.4" fill="oklch(0.58 0.012 250)">PRINCIPLE · 02 MAY</text>
+
+  <text x="80" y="320" font-family="Geist Mono, monospace" font-size="22" font-weight="500" letter-spacing="3.2" fill="oklch(0.82 0.20 155)">WHAT WE ARE NOT</text>
+
+  <text x="80" y="450" font-family="Geist, sans-serif" font-size="92" font-weight="500" letter-spacing="-2.4" fill="oklch(0.97 0.005 250)">Not tips. Not noise.</text>
+  <text x="80" y="555" font-family="Geist, sans-serif" font-size="92" font-weight="500" letter-spacing="-2.4" fill="oklch(0.97 0.005 250)"><tspan font-family="Instrument Serif, serif" font-style="italic" fill="oklch(0.82 0.20 155)">Structured focus.</tspan></text>
+
+  <text x="80" y="650" font-family="Geist, sans-serif" font-size="28" font-weight="400" letter-spacing="-0.4" fill="oklch(0.78 0.010 250)">No buy/sell calls. No targets. No SLs. We simplify the market — you execute your system.</text>
+
+  <line x1="80" y1="780" x2="1520" y2="780" stroke="oklch(0.34 0.012 250)" stroke-width="1"></line>
+  <text x="80" y="830" font-family="Geist Mono, monospace" font-size="18" letter-spacing="2" fill="oklch(0.58 0.012 250)">tralgora.com</text>
+  <text x="1520" y="830" text-anchor="end" font-family="Geist Mono, monospace" font-size="18" letter-spacing="2" fill="oklch(0.58 0.012 250)">educational · not advisory · not a tip</text>
+
+  <defs>
+    <radialGradient id="p3-fade" cx="60%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="oklch(0.16 0.012 250)" stop-opacity="0"></stop>
+      <stop offset="100%" stop-color="oklch(0.16 0.012 250)" stop-opacity="0.85"></stop>
+    </radialGradient>
+  </defs>
+</svg>

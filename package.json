@@ -1,0 +1,51 @@
+{
+  "name": "@tralgora/design-system",
+  "version": "0.1.0",
+  "description": "Tralgora design system — dark-only oklch tokens, type, logo, icons, and UI kit reference for Indian-markets product surfaces.",
+  "private": false,
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tralgora/design-system.git"
+  },
+  "homepage": "https://github.com/tralgora/design-system#readme",
+  "bugs": {
+    "url": "https://github.com/tralgora/design-system/issues"
+  },
+  "main": "colors_and_type.css",
+  "style": "colors_and_type.css",
+  "exports": {
+    ".": "./colors_and_type.css",
+    "./tokens": "./tokens/tokens.css",
+    "./tokens.css": "./tokens/tokens.css",
+    "./tokens.json": "./tokens/design-tokens.json",
+    "./tailwind": "./tokens/tailwind.config.js",
+    "./fonts/*": "./fonts/*",
+    "./assets/*": "./assets/*",
+    "./preview/*": "./preview/*"
+  },
+  "files": [
+    "colors_and_type.css",
+    "tokens/",
+    "assets/",
+    "fonts/",
+    "preview/",
+    "ui_kits/",
+    "docs/",
+    "SKILL.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "tralgora",
+    "markets",
+    "oklch",
+    "dark-mode"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}

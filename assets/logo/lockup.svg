@@ -1,0 +1,13 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 32" width="240" height="32" role="img" aria-label="Tralgora" fill="none">
+  
+  <g>
+    <circle cx="6" cy="26" r="1.6" fill="currentColor"></circle>
+    <path d="M6 18 A8 8 0 0 1 14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+    <path d="M6 12 A14 14 0 0 1 20 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.78"></path>
+    <path d="M6 6  A20 20 0 0 1 26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"></path>
+    <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"></circle>
+  </g>
+  
+  <text x="40" y="24" font-family="Geist, ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="500" letter-spacing="-0.5" fill="currentColor">Tralgora</text>
+</svg>

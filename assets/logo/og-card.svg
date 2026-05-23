@@ -1,0 +1,40 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Tralgora OG card">
+  
+  <rect width="1200" height="630" fill="oklch(0.16 0.012 250)"></rect>
+  
+  <g stroke="oklch(0.27 0.010 250)" stroke-width="1">
+    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M0 320 H1200 M0 400 H1200 M0 480 H1200 M0 560 H1200"></path>
+    <path d="M120 0 V630 M240 0 V630 M360 0 V630 M480 0 V630 M600 0 V630 M720 0 V630 M840 0 V630 M960 0 V630 M1080 0 V630"></path>
+  </g>
+  
+  <rect width="1200" height="630" fill="url(#og-fade)"></rect>
+  <defs>
+    <radialGradient id="og-fade" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="oklch(0.16 0.012 250)" stop-opacity="0"></stop>
+      <stop offset="100%" stop-color="oklch(0.16 0.012 250)" stop-opacity="0.85"></stop>
+    </radialGradient>
+  </defs>
+
+  
+  <g transform="translate(80,80) scale(2.6)" fill="none">
+    <circle cx="6" cy="26" r="1.6" fill="oklch(0.97 0.005 250)"></circle>
+    <path d="M6 18 A8 8 0 0 1 14 26" stroke="oklch(0.97 0.005 250)" stroke-width="1.5" stroke-linecap="round"></path>
+    <path d="M6 12 A14 14 0 0 1 20 26" stroke="oklch(0.97 0.005 250)" stroke-width="1.5" stroke-linecap="round" opacity="0.78"></path>
+    <path d="M6 6  A20 20 0 0 1 26 26" stroke="oklch(0.97 0.005 250)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"></path>
+    <circle cx="19.5" cy="11.7" r="2.2" fill="oklch(0.82 0.20 155)"></circle>
+  </g>
+
+  
+  <text x="80" y="380" font-family="Geist Mono, monospace" font-size="20" font-weight="500" letter-spacing="2.8" fill="oklch(0.58 0.012 250)">MARKET INTELLIGENCE RADAR</text>
+
+  
+  <text x="80" y="450" font-family="Geist, sans-serif" font-size="68" font-weight="500" letter-spacing="-1.5" fill="oklch(0.97 0.005 250)">See where the market is</text>
+  <text x="80" y="520" font-family="Geist, sans-serif" font-size="68" font-weight="500" letter-spacing="-1.5" fill="oklch(0.97 0.005 250)">
+    <tspan>really </tspan>
+    <tspan font-family="Instrument Serif, serif" font-style="italic" fill="oklch(0.82 0.20 155)">moving.</tspan>
+  </text>
+
+  
+  <text x="80" y="590" font-family="Geist Mono, monospace" font-size="16" letter-spacing="1.4" fill="oklch(0.58 0.012 250)">tralgora.com  ·  daily market structure</text>
+</svg>
