@@ -1,6 +1,6 @@
-# CLAUDE.md
+# design-system
 
-Notes for any Claude session working on this repo.
+Notes for any AI agent working on this repo.
 
 ## What this is
 
